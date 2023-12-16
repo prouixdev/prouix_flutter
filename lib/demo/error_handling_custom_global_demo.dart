@@ -2,6 +2,39 @@ import 'package:flutter/material.dart';
 import '../utils/exception_utils.dart';
 
 void main() {
+
+
+  // 🚨 Handle the error globally using FlutterError.onError callback
+  FlutterError.onError = (FlutterErrorDetails details) {
+
+    // Custom utils : Exception handling examples
+    CustomExceptionHandler.handleException(details.exception, details.stack);
+
+    /*
+    // Additional logging for detailed error information
+    print('**************************************************');
+    print('* Error Summary : ${details.summary}');
+    print('* Exception     : ${details.exception}');
+    print('* Context       : ${details.context}');
+    if (details.library != null) {
+      print('* Library       : ${details.library}');
+    }
+    if (details.stack != null) {
+      print('* Stack Trace   : ${details.stack}');
+    }
+    print('**************************************************');
+    */
+
+    // 🌐 Optionally, store the error in the API or perform additional actions
+  };
+
+
+
+
+
+
+
+
   runApp(const MyApp());
 }
 
@@ -31,34 +64,22 @@ class MyHomePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                try {
-                  List<String> fruits = ['Apple', 'Banana', 'Orange', 'Grapes'];
-                  print('First fruit: ${fruits[5]}');
-                } catch (e, stackTrace) {
-                  CustomExceptionHandler.handleException(e, stackTrace);
-                }
+                List<String> fruits = ['Apple', 'Banana', 'Orange', 'Grapes'];
+                print('First fruit: ${fruits[5]}');
               },
               child: const Text('Button 1 (List Index Error)'),
             ),
             ElevatedButton(
               onPressed: () {
-                try {
-                  throw const FormatException('An example FormatException');
-                } catch (e, stackTrace) {
-                  CustomExceptionHandler.handleException(e, stackTrace);
-                }
+                throw const FormatException('An example FormatException');
               },
               child: const Text('Button 2 (FormatException)'),
             ),
             ElevatedButton(
               onPressed: () {
-                try {
-                  var a = "Hello";
-                  var num = a as int;
-                  print('Test2: $num');
-                } catch (e, stackTrace) {
-                  CustomExceptionHandler.handleException(e, stackTrace);
-                }
+                var a = "Hello";
+                var num = a as int;
+                print('Test2: $num');
               },
               child: const Text('Button 3 (CastError)'),
             ),

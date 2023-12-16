@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/exception_utils.dart';
 
-//https://gist.github.com/prouixdev/e06f74f48146be809921dc5a62c20b79
 void main() {
   runApp(const MyApp());
 }
