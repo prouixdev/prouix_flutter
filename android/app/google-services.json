@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "183516945189",
+    "project_id": "prouixflutter",
+    "storage_bucket": "prouixflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183516945189:android:432ca9e3abf12f5de018cc",
+        "android_client_info": {
+          "package_name": "com.prouix.flutter.prouix_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwRO_M6Y1_DbzwWntilzTmCRpvTelnml4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
